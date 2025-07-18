@@ -5,3 +5,4 @@ pandas
 matplotlib
 textblob
 streamlit-mic-recorder
+streamlit-webrtc
