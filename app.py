@@ -17,6 +17,8 @@ vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
 def get_text_stats(text):
     words = text.split()
     return len(words), len(text), np.mean([len(word) for word in words]) if words else 0, Counter(words).most_common(5)
+from textblob import TextBlob
+
 
 def get_sentiment(text):
     try:
@@ -166,7 +168,8 @@ webrtc_ctx = webrtc_streamer(
 )
 
 if webrtc_ctx.state.playing:
-    st.markdown("<p class='output-text'>🎙️ Listening... Click the mic again to stop recording.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='output-text'>🎙️ Listening... Click the mic a" \
+    "gain to stop recording.</p>", unsafe_allow_html=True)
 
     try:
         import whisper
@@ -263,6 +266,12 @@ with st.sidebar:
     </a>
     """, unsafe_allow_html=True)
 
-st.markdown("<h3 style='text-align: right; color: black; font-size: 20px; margin-top: 30%'>Created with ❤️ By Shivam </h3>", unsafe_allow_html=True)
+# st.markdown("<h3 style='text-align: right; color: black; font-size: 20px; margin-top: 30%'></h3>", unsafe_allow_html=True)
 
-
+st.markdown("""
+<hr>
+<div style='text-align: center; color: solid dark black ; font-weight:500 ;font-size: 16px;'>
+© 2025 Shivam Verma | All rights reserved.<br>
+This project is for educational and personal portfolio purposes only.
+</div>
+""", unsafe_allow_html=True)
