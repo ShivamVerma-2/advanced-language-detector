@@ -74,6 +74,11 @@ font-weight: bold;
 font-size: 18px;
 transition: background-color 0.1s;
 }}
+.stButton {{
+    display: flex;
+    justify-content: center;
+}}
+
 .stButton button:hover {{
 background: {button_hover_color};
 color: black;
